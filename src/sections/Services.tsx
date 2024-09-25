@@ -3,7 +3,12 @@ import Service from "@/components/Service";
 
 // Example data for the services
 const ConnectIcon = (
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="#000000"
+  >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
@@ -23,7 +28,12 @@ const ConnectIcon = (
 );
 
 const EducateIcon = (
-  <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+  >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
@@ -42,7 +52,12 @@ const EducateIcon = (
 );
 
 const cogIcon = (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
@@ -68,7 +83,12 @@ const cogIcon = (
 );
 
 const RenewIcon = (
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
