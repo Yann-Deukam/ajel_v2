@@ -19,9 +19,7 @@ export const BusinessShowcase = () => {
             </h2>
             <p className="text-center text-[22px] leading-[30px] text-slate-800">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              impedit repellendus assumenda sequi veritatis corrupti accusamus
-              perspiciatis commodi voluptas praesentium autem ipsa eum
-              architecto distinctio rerum, nobis aspernatur. Quidem, architecto?
+              impedit repellendus assumenda
             </p>
           </div>
           <div className="relative">

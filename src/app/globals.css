@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded-sm font-medium inline-flex items-center justify-center;
+    @apply px-4 py-2 rounded-md font-medium inline-flex items-center justify-center;
   }
 
   .btn-primary {
@@ -21,5 +21,9 @@
 
   .badge {
     @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-sm;
+  }
+
+  .card-class {
+    @apply p-10 border border-solid border-slate-800/10 rounded-sm shadow-lg max-w-xs w-full;
   }
 }

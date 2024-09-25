@@ -16,7 +16,7 @@ export const LogoTicker = () => {
     <>
       <div className="py-8 md:py-12 bg-white">
         <div className="container">
-          <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] ">
+          <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_50%,black_50%,transparent)] ">
             <div className="flex gap-14 flex-none">
               <Image
                 src={ajelConnect}

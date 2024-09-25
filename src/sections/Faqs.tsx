@@ -1,9 +1,10 @@
 import React from "react";
+import SvgDown from "@/components/SvgDown";
 
 const Faqs = () => {
   return (
     <section className="bg-white">
-      <div className="bg-white relative w-full px-6 pt-10 pb-8 mt-8 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+      <div className="bg-white relative w-full px-6 pt-10 pb-8 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
         <div className="mx-auto px-5">
           <div className="flex flex-col items-center">
             <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">
@@ -18,7 +19,9 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> How does the billing work?</span>
-                  <span className="transition group-open:rotate-180"></span>
+                  <span className="transition group-open:rotate-180">
+                    <SvgDown />
+                  </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   Springerdata offers a variety of billing options, including
@@ -33,7 +36,9 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> Can I get a refund for my subscription?</span>
-                  <span className="transition group-open:rotate-180"></span>
+                  <span className="transition group-open:rotate-180">
+                    <SvgDown />
+                  </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   We offer a 30-day money-back guarantee for most of its
@@ -48,7 +53,9 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> How do I cancel my subscription?</span>
-                  <span className="transition group-open:rotate-180"></span>
+                  <span className="transition group-open:rotate-180">
+                    <SvgDown />
+                  </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   To cancel your subscription, you can log in to your account
@@ -62,7 +69,9 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> Is there a free trial?</span>
-                  <span className="transition group-open:rotate-180"></span>
+                  <span className="transition group-open:rotate-180">
+                    <SvgDown />
+                  </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   We offer a free trial of our software for a limited time.
@@ -75,7 +84,9 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> How do I contact support?</span>
-                  <span className="transition group-open:rotate-180"></span>
+                  <span className="transition group-open:rotate-180">
+                    <SvgDown />
+                  </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   If you need help with our platform or have any other
@@ -89,7 +100,9 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> Do you offer any discounts or promotions?</span>
-                  <span className="transition group-open:rotate-180"></span>
+                  <span className="transition group-open:rotate-180">
+                    <SvgDown />
+                  </span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   We may offer discounts or promotions from time to time. To
