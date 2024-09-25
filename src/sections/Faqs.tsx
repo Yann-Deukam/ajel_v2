@@ -18,21 +18,7 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> How does the billing work?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shape-rendering="geometricPrecision"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
+                  <span className="transition group-open:rotate-180"></span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   Springerdata offers a variety of billing options, including
@@ -47,21 +33,7 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> Can I get a refund for my subscription?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shape-rendering="geometricPrecision"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
+                  <span className="transition group-open:rotate-180"></span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   We offer a 30-day money-back guarantee for most of its
@@ -76,21 +48,7 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> How do I cancel my subscription?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shape-rendering="geometricPrecision"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
+                  <span className="transition group-open:rotate-180"></span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   To cancel your subscription, you can log in to your account
@@ -104,21 +62,7 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> Is there a free trial?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shape-rendering="geometricPrecision"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
+                  <span className="transition group-open:rotate-180"></span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   We offer a free trial of our software for a limited time.
@@ -131,21 +75,7 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> How do I contact support?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shape-rendering="geometricPrecision"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
+                  <span className="transition group-open:rotate-180"></span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   If you need help with our platform or have any other
@@ -159,21 +89,7 @@ const Faqs = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                   <span> Do you offer any discounts or promotions?</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shape-rendering="geometricPrecision"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
+                  <span className="transition group-open:rotate-180"></span>
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-neutral-600">
                   We may offer discounts or promotions from time to time. To
