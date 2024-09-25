@@ -19,14 +19,51 @@ export const Header = () => {
               <Image src={Logo} alt="logo" height={60} width={60} />
               <MenuIcon className="h-8 w-8 md:hidden" />
               <nav className="hidden md:flex gap-6 text-slate-700 items-center">
-                <a href="#">Accueil</a>
-                <a href="#">A propos</a>
-                <a href="#">Nos services</a>
-                <a href="#">Nos filiales</a>
-                <a href="#">Actualitées</a>
-                <a href="#">Galérie</a>
-                <a href="#">FAQs</a>
-                <button className="btn btn-primary">Contactez-nous</button>
+                <a
+                  href="#"
+                  className="hover:underline transition-all hover:font-semibold"
+                >
+                  Accueil
+                </a>
+                <a
+                  href="#"
+                  className="hover:underline transition-all hover:font-semibold"
+                >
+                  A propos
+                </a>
+                <a
+                  href="#"
+                  className="hover:underline transition-all hover:font-semibold"
+                >
+                  Nos services
+                </a>
+                <a
+                  href="#"
+                  className="hover:underline transition-all hover:font-semibold"
+                >
+                  Nos filiales
+                </a>
+                <a
+                  href="#"
+                  className="hover:underline transition-all hover:font-semibold"
+                >
+                  Actualitées
+                </a>
+                <a
+                  href="#"
+                  className="hover:underline transition-all hover:font-semibold"
+                >
+                  Galérie
+                </a>
+                <a
+                  href="#"
+                  className="hover:underline transition-all hover:font-semibold"
+                >
+                  FAQs
+                </a>
+                <button className="btn btn-primary md:text-sm lg:text-md">
+                  Contactez-nous
+                </button>
               </nav>
             </div>
           </div>
