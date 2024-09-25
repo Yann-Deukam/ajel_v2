@@ -1,9 +1,30 @@
+"use client";
+
 import React from "react";
 import SvgDown from "@/components/SvgDown";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useRef } from "react";
+import StarImg from "@/assets/star.png";
+import springImg from "@/assets/spring.png";
 
 const Faqs = () => {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start end", "end start"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  useMotionValueEvent(scrollYProgress, "change", (latestValue) =>
+    console.log(latestValue)
+  );
   return (
-    <section className="bg-white">
+    <section className="bg-white" ref={heroRef}>
       <div className="bg-white relative w-full px-6 pt-10 pb-8 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
         <div className="mx-auto px-5">
           <div className="flex flex-col items-center">
@@ -113,6 +134,26 @@ const Faqs = () => {
               </details>
             </div>
           </div>
+          <motion.img
+            src={springImg.src}
+            alt="Kite Image"
+            className="hidden md:block absolute -right-36 -top-32"
+            height={262}
+            width={262}
+            style={{
+              translateY,
+            }}
+          />
+          <motion.img
+            src={StarImg.src}
+            alt="tube Image"
+            height={240}
+            width={240}
+            className="hidden md:block absolute bottom-24 -left-36"
+            style={{
+              translateY,
+            }}
+          />
         </div>
       </div>
     </section>

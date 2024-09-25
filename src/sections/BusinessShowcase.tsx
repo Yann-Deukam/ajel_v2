@@ -1,12 +1,27 @@
+"use client";
+
 import productImage from "@/assets/product-image.png";
 import Image from "next/image";
 import kiteImage from "@/assets/pyramid.png";
 import tubeImage from "@/assets/tube.png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const BusinessShowcase = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
     <>
-      <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
+      <section
+        ref={sectionRef}
+        className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip"
+      >
         <div className="container">
           <div className="max-w-[540px] mx-auto">
             <div className="flex justify-center">
@@ -24,18 +39,25 @@ export const BusinessShowcase = () => {
           </div>
           <div className="relative">
             <Image src={productImage} alt="product image" className="mt-5" />
-            <Image
-              src={kiteImage}
+            <motion.img
+              src={kiteImage.src}
               alt="Kite Image"
               className="hidden md:block absolute -right-36 -top-32"
               height={262}
               width={262}
+              style={{
+                translateY,
+              }}
             />
-            <Image
-              src={tubeImage}
+            <motion.img
+              src={tubeImage.src}
               alt="tube Image"
-              height={240}
+              height={450}
+              width={450}
               className="hidden md:block absolute bottom-24 -left-36"
+              style={{
+                translateY,
+              }}
             />
           </div>
         </div>
