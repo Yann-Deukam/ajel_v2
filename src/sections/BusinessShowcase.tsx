@@ -1,6 +1,7 @@
 "use client";
 
 import productImage from "@/assets/product-image.png";
+import Team from "@/assets/team.jpg";
 import Image from "next/image";
 import kiteImage from "@/assets/pyramid.png";
 import tubeImage from "@/assets/tube.png";
@@ -39,7 +40,8 @@ export const BusinessShowcase = () => {
             </p>
           </div>
           <div className="relative">
-            <Image src={productImage} alt="product image" className="mt-5" />
+            <Image src={Team} alt="product image" className="mt-5 rounded-lg" />
+            {/* <Image src={productImage} alt="product image" className="mt-5" /> */}
             <motion.img
               src={kiteImage.src}
               alt="Kite Image"

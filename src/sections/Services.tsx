@@ -137,6 +137,20 @@ const serviceData = [
     link: "#",
     svgIcon: RenewIcon,
   },
+  {
+    title: "Learn Express",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime odit suscipit mollitia quos id, corporis debitis tempore deleniti aliquam..",
+    link: "#",
+    svgIcon: cogIcon,
+  },
+  {
+    title: "Learn TypeScript",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime odit suscipit mollitia quos id, corporis debitis tempore deleniti aliquam..",
+    link: "#",
+    svgIcon: RenewIcon,
+  },
 ];
 
 const Services = () => {

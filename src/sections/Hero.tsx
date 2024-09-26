@@ -45,9 +45,13 @@ export const Hero = () => {
                 placeat quam perferendis natus. Eaque.
               </p>
               <div className="flex gap-1 items-center mt-[30px] ">
-                <button className="btn btn-text">Contactez-nous</button>
-                <button className="btn btn-primary gap-1 font-extrabold">
-                  <span>Nos services</span>
+                <button className="btn btn-text border border-slate-800 hover:bg-slate-50/20 transition ease-in duration-200">
+                  <a href="#form">Contactez-nous</a>
+                </button>
+                <button className="btn btn-primary gap-1 font-bold">
+                  <span>
+                    <a href="#services">Nos services</a>
+                  </span>
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </div>
