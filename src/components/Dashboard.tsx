@@ -12,7 +12,7 @@ const Dashboard = () => {
   return (
     <>
       <h1 className="text-2xl font-bold text-center mt-20">
-        Dashboard de l'admin
+        Dashboard de l&apos;admin
       </h1>
       <div className="w-full mt-10 container mx-auto">
         <div className="bg-blue-100 p-2 rounded-t-lg">
