@@ -1,5 +1,7 @@
 {
   "/page": "app/page.js",
   "/Galerie/page": "app/Galerie/page.js",
-  "/Actu/page": "app/Actu/page.js"
+  "/Actu/page": "app/Actu/page.js",
+  "/Admin/Login/page": "app/Admin/Login/page.js",
+  "/Admin/Dashboard/page": "app/Admin/Dashboard/page.js"
 }

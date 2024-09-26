@@ -1,4 +1,17 @@
 import React from "react";
+import ajelConnect from "@/assets/ajel connect secondary.png";
+import ajelStore from "@/assets/ajel store secondary.png";
+import ajelAcademy from "@/assets/ajel academy secondary.png";
+import ajelAnalytics from "@/assets/ajel analytics secondary.png";
+import met from "@/assets/met secondary.png";
+import qcic from "@/assets/QCIC .png";
+import aec from "@/assets/aec.png";
+import pearsonEducation from "@/assets/pearson .png";
+import osi from "@/assets/osi.png";
+import adNova from "@/assets/adnova secondary.png";
+import decode from "@/assets/decode secondary.png";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Filiale = () => {
   return (
@@ -13,88 +26,84 @@ const Filiale = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Ad-Nova</h2>
-            <p className="text-gray-700">
+            <Image src={adNova} alt="ad nova" height={50} />
+            <p className="text-gray-700 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
+            </p>
+          </div>
+          <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
+            <Image src={aec} alt="aec" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
               sit amet magna id ex hendrerit semper.
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">AEC</h2>
-            <p className="text-gray-700">
+            <Image src={ajelAcademy} alt="ajel academy" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">
-              Ajel Academy
-            </h2>
-            <p className="text-gray-700">
+            <Image src={ajelAnalytics} alt="ajel analytics" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">
-              Ajel Analytics
-            </h2>
-            <p className="text-gray-700">
+            <Image src={ajelConnect} alt="ajel connect" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">
-              Ajel Connect
-            </h2>
-            <p className="text-gray-700">
+            <Image src={ajelStore} alt="ajel store" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Ajel Store</h2>
-            <p className="text-gray-700">
+            <Image src={decode} alt="decode" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">Decode</h2>
-            <p className="text-gray-700">
+            <Image src={met} alt="met" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">MET</h2>
-            <p className="text-gray-700">
+            <Image src={osi} alt="osi" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">OSI</h2>
-            <p className="text-gray-700">
+            <Image
+              src={pearsonEducation}
+              alt="pearson pearson Education "
+              height={50}
+            />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
           <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">
-              Pearson Education
-            </h2>
-            <p className="text-gray-700">
+            <Image src={qcic} alt="qcic" height={50} />
+            <p className="text-gray-700 text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
-            </p>
-          </div>
-          <div className="bg-white rounded-lg shadow-sm transition-all p-8 hover:shadow-lg cursor-pointer">
-            <h2 className="text-xl font-bold text-gray-800 mb-4">QCIC</h2>
-            <p className="text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              sit amet magna id ex hendrerit semper.
+              sit amet magna id ex hendrerit semper.Lorem ipsum dolor sit amet
             </p>
           </div>
         </div>
