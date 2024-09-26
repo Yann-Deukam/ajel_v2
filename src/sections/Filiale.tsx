@@ -2,7 +2,7 @@ import React from "react";
 
 const Filiale = () => {
   return (
-    <div className="min-h-screen p-4">
+    <div className="min-h-screen p-4" id="filiales">
       <div className="container mx-auto pt-12 pb-20">
         <h2 className="font-extrabold text-2xl text-center md:text-[46px] md:leading-[60px] bg-gradient-to-b from-black to-slate-700 text-transparent bg-clip-text mt-5 my-5">
           Nos Filiales

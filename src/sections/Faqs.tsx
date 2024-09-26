@@ -24,7 +24,7 @@ const Faqs = () => {
     console.log(latestValue)
   );
   return (
-    <section className="bg-white" ref={heroRef}>
+    <section className="bg-white" ref={heroRef} id="faqs">
       <div className="bg-white relative w-full px-6 pt-10 pb-8 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
         <div className="mx-auto px-5">
           <div className="flex flex-col items-center">

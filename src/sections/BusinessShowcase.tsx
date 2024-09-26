@@ -20,7 +20,8 @@ export const BusinessShowcase = () => {
     <>
       <section
         ref={sectionRef}
-        className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip"
+        className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip scroll-smooth"
+        id="apropos"
       >
         <div className="container">
           <div className="max-w-[540px] mx-auto">
