@@ -1,7 +1,47 @@
-import { Header } from "@/sections/Header";
-import React from "react";
+"use client";
 
-const page = () => {
+import { Header } from "@/sections/Header";
+import { useState } from "react";
+import React from "react";
+import { CheckIcon } from "@heroicons/react/24/solid";
+
+// Images from the public/assets/formation directory
+const courses = [
+  {
+    image: "/formation/image-1.jpg", // Update these paths to match your image names
+  },
+  {
+    image: "/formation/image-2.jpg",
+  },
+  {
+    image: "/formation/image-3.jpg",
+  },
+  {
+    image: "/formation/image-4.jpg", // Update these paths to match your image names
+  },
+  {
+    image: "/formation/image-5.jpg",
+  },
+  {
+    image: "/formation/image-6.jpg",
+  },
+  {
+    image: "/formation/image-7.jpg",
+  },
+  {
+    image: "/formation/image-8.jpg",
+  },
+];
+
+const Page = () => {
+  const [selectedCourse, setSelectedCourse] = useState<number | null>(null);
+
+  const handleSelect = (index: number) => {
+    if (selectedCourse === null) {
+      setSelectedCourse(index); // Set only if no course is selected
+    }
+  };
+
   return (
     <>
       <Header />
@@ -10,10 +50,9 @@ const page = () => {
       </h2>
       <div className="container mx-auto">
         <p className="text-center mt-5">
-          Merci de prendre un moment pour remplir le formulaire
-          d&prime;inscription à notre formation ? Votre participation est
-          essentielle pour nous permettre de mieux organiser et adapter le
-          contenu à vos besoins. Merci d&prime;avance pour votre coopération !
+          Merci de prendre un moment pour remplir le formulaire d'inscription à
+          notre formation. Votre participation est essentielle pour nous
+          permettre de mieux organiser et adapter le contenu à vos besoins.
         </p>
         <div className="p-6 space-y-6">
           <form action="#">
@@ -69,127 +108,51 @@ const page = () => {
             </div>
             <div className="mt-20">
               <h2 className="text-xl font-semibold">
-                Sélèctionnez une formation :
+                Sélectionnez une formation :
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-                <div className="group cursor-pointer relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxNHx8bmF0dXJlfGVufDB8MHx8fDE2OTQwOTk3Mjl8MA&ixlib=rb-4.0.3&q=80&w=1080"
-                    alt="Image 1"
-                    className="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      choisir cette formation
-                    </button>
-                  </div>
-                </div>
+                {courses.map((course, index) => (
+                  <div
+                    key={index}
+                    className="group cursor-pointer relative"
+                    onClick={() => handleSelect(index)}
+                  >
+                    {/* Image */}
+                    <img
+                      src={course.image}
+                      alt={`Image ${index + 1}`}
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
 
-                <div className="group cursor-pointer relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMXx8bmF0dXJlfGVufDB8MHx8fDE2OTQwOTk3Mjl8MA&ixlib=rb-4.0.3&q=80&w=1080"
-                    alt="Image 1"
-                    className="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      choisir cette formation
-                    </button>
-                  </div>
-                </div>
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity rounded-lg"></div>
 
-                <div className="group cursor-pointer relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxuYXR1cmV8ZW58MHwwfHx8MTY5NDA5OTcyOXww&ixlib=rb-4.0.3&q=80&w=1080"
-                    alt="Image 1"
-                    className="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      choisir cette formation
-                    </button>
+                    {/* Button or Check Icon */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      {selectedCourse === index ? (
+                        <div className="bg-white p-2 rounded-lg">
+                          <CheckIcon className="h-6 w-6 text-green-500" />
+                        </div> // Display check icon if selected
+                      ) : (
+                        <button
+                          className={`bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors ${
+                            selectedCourse !== null ? "cursor-not-allowed" : ""
+                          }`}
+                          disabled={selectedCourse !== null} // Disable further selection after first choice
+                        >
+                          choisir cette formation
+                        </button>
+                      )}
+                    </div>
                   </div>
-                </div>
-
-                <div className="group cursor-pointer relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxuYXR1cmV8ZW58MHwwfHx8MTY5NDA5OTcyOXww&ixlib=rb-4.0.3&q=80&w=1080"
-                    alt="Image 1"
-                    className="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      choisir cette formation
-                    </button>
-                  </div>
-                </div>
-
-                <div className="group cursor-pointer relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw3fHxuYXR1cmV8ZW58MHwwfHx8MTY5NDA5OTcyOXww&ixlib=rb-4.0.3&q=80&w=1080"
-                    alt="Image 1"
-                    className="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      choisir cette formation
-                    </button>
-                  </div>
-                </div>
-
-                <div className="group cursor-pointer relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1419133203517-f3b3ed0ba2bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxyaXZlcnxlbnwwfDB8fHwxNjk0MDk5ODgyfDA&ixlib=rb-4.0.3&q=80&w=1080"
-                    alt="Image 1"
-                    className="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      choisir cette formation
-                    </button>
-                  </div>
-                </div>
-
-                <div className="group cursor-pointer relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1498855926480-d98e83099315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxyaXZlcnxlbnwwfDB8fHwxNjk0MDk5ODgyfDA&ixlib=rb-4.0.3&q=80&w=1080"
-                    alt="Image 1"
-                    className="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      choisir cette formation
-                    </button>
-                  </div>
-                </div>
-
-                <div className="group cursor-pointer relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1502754400466-c87ff3039da7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMXx8cml2ZXJ8ZW58MHwwfHx8MTY5NDA5OTg4Mnww&ixlib=rb-4.0.3&q=80&w=1080"
-                    alt="Image 1"
-                    className="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      choisir cette formation
-                    </button>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </form>
-        </div>
-        <div className="flex justify-center items-center w-full m-5">
-          <button
-            type="button"
-            className="py-2 px-4 w-[400px] bg-slate-800 hover:bg-slate-900 focus:ring-slate-900 outline-none text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none rounded-lg"
-          >
-            M&prime;enregister
-          </button>
         </div>
       </div>
     </>
   );
 };
 
-export default page;
+export default Page;
