@@ -1,4 +1,3 @@
 {
-  "/Formation/page": "app/Formation/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/Formation/page": "app/Formation/page.js"
 }

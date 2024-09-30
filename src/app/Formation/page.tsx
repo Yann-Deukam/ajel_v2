@@ -50,9 +50,10 @@ const Page = () => {
       </h2>
       <div className="container mx-auto">
         <p className="text-center mt-5">
-          Merci de prendre un moment pour remplir le formulaire d'inscription à
-          notre formation. Votre participation est essentielle pour nous
-          permettre de mieux organiser et adapter le contenu à vos besoins.
+          Merci de prendre un moment pour remplir le formulaire
+          d&prime;inscription à notre formation. Votre participation est
+          essentielle pour nous permettre de mieux organiser et adapter le
+          contenu à vos besoins.
         </p>
         <div className="p-6 space-y-6">
           <form action="#">
