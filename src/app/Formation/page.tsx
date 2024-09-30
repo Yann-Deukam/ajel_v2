@@ -20,7 +20,7 @@ const page = () => {
             <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6 sm:col-span-3">
                 <label className="text-sm font-medium text-gray-900 block mb-2">
-                  Product Name
+                  Nom
                 </label>
                 <input
                   type="text"
@@ -32,7 +32,7 @@ const page = () => {
               </div>
               <div className="col-span-6 sm:col-span-3">
                 <label className="text-sm font-medium text-gray-900 block mb-2">
-                  Category
+                  Prénom
                 </label>
                 <input
                   type="text"
@@ -44,7 +44,7 @@ const page = () => {
               </div>
               <div className="col-span-6 sm:col-span-3">
                 <label className="text-sm font-medium text-gray-900 block mb-2">
-                  Category
+                  Email
                 </label>
                 <input
                   type="text"
@@ -56,7 +56,7 @@ const page = () => {
               </div>
               <div className="col-span-6 sm:col-span-3">
                 <label className="text-sm font-medium text-gray-900 block mb-2">
-                  Category
+                  Numéro de téléphone
                 </label>
                 <input
                   type="text"
@@ -80,7 +80,7 @@ const page = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      View
+                      choisir cette formation
                     </button>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const page = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      View
+                      choisir cette formation
                     </button>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const page = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      View
+                      choisir cette formation
                     </button>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const page = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      View
+                      choisir cette formation
                     </button>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const page = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      View
+                      choisir cette formation
                     </button>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const page = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      View
+                      choisir cette formation
                     </button>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ const page = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      View
+                      choisir cette formation
                     </button>
                   </div>
                 </div>
@@ -171,7 +171,7 @@ const page = () => {
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <button className="bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                      View
+                      choisir cette formation
                     </button>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ const page = () => {
             type="button"
             className="py-2 px-4 w-[400px] bg-slate-800 hover:bg-slate-900 focus:ring-slate-900 outline-none text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none rounded-lg"
           >
-            M&primes;enregister
+            M&prime;enregister
           </button>
         </div>
       </div>
