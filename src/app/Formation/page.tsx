@@ -184,7 +184,7 @@ const page = () => {
             type="button"
             className="py-2 px-4 w-[400px] bg-slate-800 hover:bg-slate-900 focus:ring-slate-900 outline-none text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none rounded-lg"
           >
-            M'enregister
+            M&primes;enregister
           </button>
         </div>
       </div>
