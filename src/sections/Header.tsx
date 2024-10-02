@@ -1,9 +1,9 @@
 "use client";
 
 import Logo from "@/assets/ajel icon.png";
-import Image from "next/image";
 import CloseIcon from "@/assets/close.svg"; // new close icon component
 import MenuIcon from "@/assets/menu.svg";
+import Image from "next/image";
 import { useState } from "react";
 
 export const Header = () => {
@@ -43,6 +43,12 @@ export const Header = () => {
                     className="hover:underline transition-all hover:font-semibold"
                   >
                     Accueil
+                  </a>
+                  <a
+                    href="/Formation"
+                    className="hover:underline transition-all hover:font-semibold"
+                  >
+                    Formations
                   </a>
                   <a
                     href="#apropos"
@@ -91,6 +97,12 @@ export const Header = () => {
                   className="hover:underline transition-all hover:font-semibold"
                 >
                   Accueil
+                </a>
+                <a
+                  href="/Formation"
+                  className="hover:underline transition-all hover:font-semibold"
+                >
+                  Formations
                 </a>
                 <a
                   href="#apropos"

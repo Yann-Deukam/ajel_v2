@@ -1,10 +1,9 @@
 "use client";
 
 import { Header } from "@/sections/Header";
-import { useState } from "react";
-import React from "react";
+import emailjs from '@emailjs/browser';
 import { CheckIcon } from "@heroicons/react/24/solid";
-
+import { ChangeEvent, FormEvent, useRef, useState } from "react";
 // Images from the public/assets/formation directory
 const courses = [
   {
@@ -32,16 +31,56 @@ const courses = [
     image: "/formation/image-8.jpg",
   },
 ];
-
+interface ICourse {
+  firstname: string,
+  lastname: string,
+  email: string,
+  phone: string,
+  training: number
+}
 const Page = () => {
+  const formRef = useRef();
   const [selectedCourse, setSelectedCourse] = useState<number | null>(null);
-
+  const [form, setForm] = useState<ICourse>()
   const handleSelect = (index: number) => {
-    if (selectedCourse === null) {
-      setSelectedCourse(index); // Set only if no course is selected
+    // if (selectedCourse === null) {
+    // }
+    //@ts-ignore
+    setForm({ ...form, training: index + 1 })
+    const inputElement = document.getElementById('training');
+
+
+    if (inputElement) {
+      //@ts-ignore
+      inputElement.value = index + 1;
     }
+    setSelectedCourse(index); // Set only if no course is selected
   };
 
+  function changeElement(e: ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
+    //@ts-ignore
+    setForm({ ...form, [name]: value })
+
+  }
+
+  function submitForm(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    console.log("form data ", form);
+    emailjs
+      .sendForm('service_6mkydgf', 'template_ka2ys6q', formRef.current, {
+        publicKey: 'LYpgvx9dWWHdgsq-r',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          alert("Votre message à été envoyé avec succès !!!")
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+  }
   return (
     <>
       <Header />
@@ -56,7 +95,7 @@ const Page = () => {
           contenu à vos besoins.
         </p>
         <div className="p-6 space-y-6">
-          <form action="#">
+          <form ref={formRef} onSubmit={submitForm}>
             <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6 sm:col-span-3">
                 <label className="text-sm font-medium text-gray-900 block mb-2">
@@ -64,7 +103,8 @@ const Page = () => {
                 </label>
                 <input
                   type="text"
-                  name="product-name"
+                  name="firstname"
+                  onChange={changeElement}
                   id="product-name"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 outline-none"
                   placeholder="Apple Imac 27”"
@@ -76,7 +116,8 @@ const Page = () => {
                 </label>
                 <input
                   type="text"
-                  name="category"
+                  name="lastname"
+                  onChange={changeElement}
                   id="category"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 outline-none"
                   placeholder="Electronics"
@@ -88,7 +129,8 @@ const Page = () => {
                 </label>
                 <input
                   type="text"
-                  name="category"
+                  name="email"
+                  onChange={changeElement}
                   id="category"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 outline-none"
                   placeholder="Electronics"
@@ -100,13 +142,21 @@ const Page = () => {
                 </label>
                 <input
                   type="text"
-                  name="category"
+                  name="phone"
+                  onChange={changeElement}
                   id="category"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 outline-none"
                   placeholder="Electronics"
                 />
               </div>
             </div>
+            <input
+              type="number"
+              name="training"
+              onChange={changeElement}
+              id="training"
+
+            />
             <div className="mt-20">
               <h2 className="text-xl font-semibold">
                 Sélectionnez une formation :
@@ -136,10 +186,8 @@ const Page = () => {
                         </div> // Display check icon if selected
                       ) : (
                         <button
-                          className={`bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors ${
-                            selectedCourse !== null ? "cursor-not-allowed" : ""
-                          }`}
-                          disabled={selectedCourse !== null} // Disable further selection after first choice
+                          className={`bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors `}
+                        // disabled={selectedCourse !== null} // Disable further selection after first choice
                         >
                           choisir cette formation
                         </button>
@@ -149,6 +197,13 @@ const Page = () => {
                 ))}
               </div>
             </div>
+
+            <button
+              className={`bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-950 transition-colors `}
+            // disabled={selectedCourse !== null} // Disable further selection after first choice
+            >
+              Enregistrer
+            </button>
           </form>
         </div>
       </div>
